@@ -7,9 +7,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   // 基础配置
-  title: '柠枺文档', // 网站标题（显示在浏览器标签页和网站头部）
+  title: 'FCL_CE教程', // 网站标题（显示在浏览器标签页和网站头部）
   tagline: '专注于 Minecraft Java Edition for Android 的启动器文档', // 网站标语（通常显示在首页的副标题位置）
-  favicon: 'img/favicon.ico', // 浏览器标签页图标
+  favicon: 'img/favicon.png', // 浏览器标签页图标
 
   // 部署配置
   url: 'https://docs.lemwood.cn', // 生产环境访问地址
@@ -21,7 +21,13 @@ const config: Config = {
 
   // 构建配置
   onBrokenLinks: 'warn', // 遇到损坏链接时抛出错误（可选值：ignore | warn | throw）
-  onBrokenMarkdownLinks: 'warn', // 遇到损坏的Markdown链接时警告
+
+  // Markdown 配置
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn', // 遇到损坏的Markdown链接时警告
+    },
+  },
 
   // 国际化配置
   i18n: {
@@ -65,12 +71,12 @@ const config: Config = {
 
   // 主题配置
   themeConfig: {
-    image: 'img/logo.svg', // 社交媒体分享卡片图片
+    image: 'img/favicon.png', // 社交媒体分享卡片图片
     navbar: { // 导航栏配置
-      title: '柠枺文档', // 导航栏标题
+      title: 'FCL_CE教程', // 导航栏标题
       logo: {
-        alt: '柠枺文档', // logo的alt文本（无障碍访问需要）
-        src: 'img/logo.svg', // logo图片路径
+        alt: 'FCL_CE教程', // logo的alt文本（无障碍访问需要）
+        src: 'img/favicon.png', // logo图片路径
       },
       items: [ // 导航项配置
         {
@@ -91,7 +97,7 @@ const config: Config = {
       style: 'dark',
       logo: {
         alt: 'Logo',
-        src: 'img/logo.svg',
+        src: 'img/favicon.png',
         href: '/',
         width: 60,
         height: 60,
@@ -100,10 +106,9 @@ const config: Config = {
         {
           title: '文档',
           items: [
-            { label: '快速开始', to: '/docs/intro' },
+            { label: '快速开始', to: '/docs' },
             { label: 'FCL 启动器', to: '/docs/fcl/intro' },
-            { label: '插件', to: '/docs/plugins/plugins' },
-            { label: 'Vulkan', to: '/docs/vulkan/Vulkanmod' },
+            { label: '插件', to: '/docs/plugins' },
           ],
         },
         {
@@ -115,15 +120,19 @@ const config: Config = {
             },
             {
               label: 'QQ群',
-              href: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=CGbo6wTBOyObAMHpoK2jurd9thz7Wkvs&authKey=7QLULXcXdZFCGkO%2F16zLnEVhRKLwtdc3GTuuqVRaG%2BcxVxpMWqFrEM046OzOB9ud&noverify=0&group_code=743460071',
-            }
+              href: '/docs/qqgroup',
+            },
+            {
+              label: '博客',
+              href: '/blog',
+            },
           ],
         },
       ],
       copyright: `
         <div style="margin-top: 2rem; border-top: 1px solid #444; padding-top: 1rem">
           <div>
-                版权所有 © ${new Date().getFullYear()} by DMTR · 
+                版权所有 © ${new Date().getFullYear()} by fcl玩家社区 · 
           </div>
           <div>
             此网站基于 <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>开发.
