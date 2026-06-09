@@ -12,7 +12,7 @@ const config: Config = {
   favicon: 'img/favicon.png', // 浏览器标签页图标
 
   // 部署配置
-  url: 'https://docs.lemwood.cn', // 生产环境访问地址
+  url: 'https://mitutorials.miawa.cn', // 生产环境访问地址
   baseUrl: '/', // 网站的基础路径（GitHub Pages部署时通常设为 '/项目名/'）
 
   // GitHub Pages部署配置（如果不用GitHub Pages可忽略）
@@ -32,8 +32,17 @@ const config: Config = {
   // 国际化配置
   i18n: {
     defaultLocale: 'zh-Hans', // 默认语言
-    locales: ['zh-Hans'], // 支持的语言列表（如需中文支持可添加 'zh-Hans'）
-
+    locales: ['zh-Hans', 'en'], // 支持的语言列表
+    localeConfigs: {
+      'zh-Hans': {
+        label: '简体中文',
+        direction: 'ltr',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
   },
 
   // 预设配置
@@ -86,6 +95,10 @@ const config: Config = {
           label: '文档', // 显示文本
         },
         {to: '/blog', label: '博客', position: 'left'}, // 博客链接
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://github.com/leemwood/fcl-docs',
           label: 'GitHub',

@@ -1,0 +1,10 @@
+{
+  "position": 1.8,
+  "label": "外部资源下载",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "外部资源下载"
+  }
+}

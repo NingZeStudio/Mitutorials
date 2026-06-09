@@ -1,0 +1,10 @@
+{
+  "position": 1.9,
+  "label": "游玩准备",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "游玩准备"
+  }
+}
